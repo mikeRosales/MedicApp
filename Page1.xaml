@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xapp.Page1">
+    <ScrollView>
+        <RelativeLayout Padding="15">
+            <BoxView Color="Green" HeightRequest="100"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" />
+            <StackLayout Padding="5" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=30}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"  >
+                <Label Text="Medical Plus" 
+               FontAttributes="Bold" 
+               HorizontalOptions="Center"/>
+                <Image Source="Icon.png"/>
+
+                <Label Text="No. Mat Dr."/>
+                <Entry x:Name="usernameEntry" 
+               TextColor="Black"  Keyboard="Numeric"
+               Placeholder="Introduzca su matricula" />
+                <Label Text="Password" />
+                <Entry x:Name="passwordEntry" 
+               IsPassword="True" 
+               Placeholder="Introduzca contraseña" />
+                <Button  Text="Login"
+                HeightRequest="50"
+                WidthRequest="50" Clicked="OnbtnpageClickme"/>
+                <Label x:Name="messageLabel" />
+            </StackLayout>
+        </RelativeLayout>
+    </ScrollView>
+</ContentPage>
